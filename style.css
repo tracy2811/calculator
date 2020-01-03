@@ -1,0 +1,59 @@
+body {
+	background: #eee;
+}
+
+div, button {
+	font-size: 4vh;
+	font-weight: bold;
+	border-radius: 2vh;
+	background: #e6d1d1;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 1.5vh;
+	padding: 1.5vh;
+	max-width: 90vw;
+	width: 60vh;
+	height: 90vh;
+	margin: auto;
+	background: linear-gradient(60deg, #51eeba 0%, #062c6c 100%);
+}
+
+.op {
+	background: #ceceff;
+}
+
+.num, #dot {
+	background: #eee;
+}
+
+#display {
+	margin: 2vh 0 1vh 0;
+	background: #fff;
+	grid-column: 1/5;
+	text-align: right;
+	font-size: 5.5vh;
+	font-weight: bold;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	/*
+	direction: rtl;
+	*/
+}
+
+#add {
+	grid-column: 4;
+	grid-row: 3/5;
+}
+
+#cal {
+	grid-column: 4;
+	grid-row: 5/7;
+}
+
+button:active, button:disabled {
+	color: #bbb;
+}

@@ -1,9 +1,7 @@
 const grid = document.querySelector(".grid");
 const screen = document.querySelector("#display");
-
-grid.addEventListener('click', handleClick);
-
 let prevBtn = "clr";	// "num", "op", "cal"
+grid.addEventListener('click', handleClick);
 
 function handleClick(e) {
 	if (e.target.localName != "button") return;
@@ -27,7 +25,6 @@ function handleClick(e) {
 		default:
 			break;
 	}
-
 }
 
 function disableMulDiv(val) {
@@ -106,9 +103,11 @@ function handleCal() {
 	} else if (expr.charAt(0) == "+") {
 		expr = expr.slice(1);
 	}
+
 	let opr = expr.split(/[\+\-\*\/]/).map(o => +o);
 	opr[0] *= firstSign;
 	let oprt = expr.split(/[0-9]/).filter(o => o != "");
+
 	// Mul, div first
 	for (let i = 0; i < oprt.length;) {
 		if (oprt[i] == "*" || oprt[i] == "/") {
@@ -119,6 +118,7 @@ function handleCal() {
 			++i;
 		}
 	}
+
 	// Add, sub
 	let result =  opr.reduce((re, cur, i) => operate(oprt[i-1], re, cur));
 	screen.textContent = result;

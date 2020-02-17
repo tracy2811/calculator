@@ -1,3 +1,11 @@
+// Register serviceWorker
+if ('serviceWorker' in navigator) {
+	navigator.serviceWorker.register('./sw.js')
+		.then(function () {
+			console.log('SW registered');
+		});
+}
+
 const grid = document.querySelector(".grid");
 const screen = document.querySelector("#display");
 let prevBtn = "clr";	// "num", "op", "cal"

@@ -1,0 +1,16 @@
+{
+	"name": "Simple Calculator in JavaScript",
+	"short_name": "Calculator",
+	"start_url": ".",
+	"display": "standalone",
+	"orientation": "portrait",
+	"background_color": "#eee",
+	"theme_color": "#51eeba",
+	"icons": [
+		{
+			"src": "icon-144x144.png",
+			"sizes": "144x144",
+			"type": "image/png"
+		}
+	]
+}

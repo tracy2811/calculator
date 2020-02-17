@@ -3,11 +3,11 @@ self.addEventListener('install', function (event) {
 	event.waitUntil(
 		caches.open('static').then(function (cache) {
 			cache.addAll([
-				'/',
-				'/index.html',
-				'/style.css',
-				'/script.js',
-				'/icon-144x144.png',
+				'/calculator',
+				'/calculator/index.html',
+				'/calculator/style.css',
+				'/calculator/script.js',
+				'/calculator/icon-144x144.png',
 			]);
 		}),
 	);
